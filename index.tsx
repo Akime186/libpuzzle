@@ -51,7 +51,7 @@ const gameData: GameStage[] = [
 然而,迎接你的不是寂靜的空間,而是一隻小松鼠。
 你愣住了。
 沒錯,圖書館的吉祥物確實是松鼠,但那只是標誌與雕像,從未想過會在這裡遇見一隻活生生的。
-就在你還驚訝之际,松鼠竟抬起頭,用清晰的語調開口:
+就在你還驚訝之際,松鼠竟抬起頭,用清晰的語調開口:
 「你終於來了。為了讓你真正找回遺失的記憶,你必須通過重重謎題......祝你幸運。」
 話音剛落,牠的身影化作一縷煙霧般散去,只留下一張紙靜靜飄落在你眼前。`
   },
@@ -62,6 +62,7 @@ const gameData: GameStage[] = [
 「有人從我身旁帶走清涼,
 有人在我身體裡藏起秘密。
 我們並肩而立」
+「清涼應該是水，水旁邊的東西……」你如此思考著
 請找到謎語的地點並根據題目回答正確答案`,
     hints: [
         '回歸到最初的起點',
@@ -83,10 +84,13 @@ const gameData: GameStage[] = [
   },
   // Stage 2: Image Riddle
   {
-    story: [`<img src="https://drive.google.com/uc?export=view&id=1KgfqHANEIgGVA7QTRLO6AgyEcEcJSvBA" alt="Riddle image" style="max-width: 100%; border-radius: 8px;">
-你凝視著那張紙,上面的圖案似乎是某個地方的縮影。
-「這裡......在哪裡見過?」你心中浮現熟悉感,卻一時說不上來。
-忽然,你注意到圖中的幾串數字`],
+    story: [`<img src="https://drive.google.com/thumbnail?id=1tsAEFXajhvcWWJSxLTD_eKjewo06xzfy&sz=w1920-h946" alt="Riddle image" style="max-width: 100%; border-radius: 8px;">
+你凝視著那張紙，上面的圖案似乎是某個地方的縮影。
+「這裡……在哪裡見過？」你心中浮現熟悉感，卻一時說不上來。
+忽然，你注意到圖中的幾串數字：
+873.57
+865
+1058125`],
     riddle: `它像是一把鑰匙,指向你曾經走過的某個角落。
 請找出並回答真正的名字。`,
     hints: [
@@ -116,15 +120,7 @@ const gameData: GameStage[] = [
 這一次,是一間潔白的醫院病房。
 你正緊緊握著他的手,他的臉色蒼白,但眼神依舊明亮。`
   },
-  // Stage 4: Story Continues
-  {
-    story: [],
-    riddle: '',
-    hints: [],
-    answers: [],
-    successStory: ''
-  },
-  // Stage 5: Discussion Room Riddle
+  // Stage 4: The Hospital Riddle
   {
     story: `他低聲問:「你知道『英雄』這個詞,代表著兩種截然不同的特質嗎?」
 「『英』指的是聰慧、出眾;『雄』則是膽識與力量。」
@@ -136,9 +132,8 @@ const gameData: GameStage[] = [
 「我不知道」你急切地打斷他:「我不想和你湊成一對,也不想被當成同性戀。」
 話音落下,他愣住了,隨即輕輕抽回自己的手,不再說話。
 病房裡只剩下消毒水的氣味,和一種無法言說的空白。
-你心裡十分難受,彷彿這並不是虛構的場景,而是你曾親身經歷過的真實記憶,隱隱約約你感受到好像快要知道答案了。
-請前往圖書館小討論室,解完題目後輸入三位數字。`,
-    riddle: ``,
+你心裡十分難受,彷彿這並不是虛構的場景,而是你曾親身經歷過的真實記憶,隱隱約約你感受到好像快要知道答案了。`,
+    riddle: `請前往圖書館小討論室,解完題目後輸入三位數字。`,
     hints: [
         '動動手,想想看。',
         '講話時會有動作嗎?',
@@ -149,7 +144,7 @@ const gameData: GameStage[] = [
 「明天就是校慶了。」他的聲音很輕,伴隨著病房裡機械規律的滴答聲。
 「嗯。」你下意識地應了一聲。
 「......你是不是,很討厭身為同性戀的我?」
-你沉默了。那一刻,你心裡翻湧著什麼,却始終沒有開口。
+你沉默了。那一刻,你心裡翻湧著什麼,卻始終沒有開口。
 而那次,也成了你最後一次見到他。
 畫面一閃而逝,像是從記憶深處被硬生生拉扯出來的片段。你還來不及細想,身後忽然傳來一個聲音:
 「抱歉......明明我已經知道答案了,卻還是執意要問出口。」
@@ -159,9 +154,9 @@ const gameData: GameStage[] = [
 少年的眼神裡沒有責怪,只有淡淡的憂傷與執著。他繼續說:
 「明明知道周圍的眼光異樣,還是讓你也承受了那些壓力。對不起。」
 你的喉嚨發緊,話在嘴邊盤旋,卻怎麼樣都說不出來。腦中滿是翻飛的文字——
-<img src="https://drive.google.com/uc?export=view&id=1tsAEFXajhvcWWJSxLTD_eKjewo06xzfy" alt="Scrambled text" style="max-width: 100%; display: block; margin: 1em auto;">`
+<img src="https://drive.google.com/thumbnail?id=1KgfqHANEIgGVA7QTRLO6AgyEcEcJSvBA&sz=w725-h162" alt="Scrambled text" style="max-width: 100%; display: block; margin: 1em auto;">`
   },
-   // Stage 6: Final Riddle
+   // Stage 5: Final Riddle
   {
     story: [],
     riddle: '請輸入你想對少年說的話(不須標點)。',
@@ -178,10 +173,11 @@ const gameData: GameStage[] = [
 聽到這句話,那個少年笑了,身影緩緩消逝在空白中。
 隨著光影散去,你逐漸回到圖書館的現實。討論室的桌面上安靜無聲,只有一隻圖書館松鼠擺飾,正歪著頭望著你。`
   },
-  // Stage 7: End Game
+  // Stage 6: End Game
   {
     story: `[END]
-遊戲結束,謝謝遊玩。若想重新體驗,請輸入『重來』。`,
+遊戲結束，謝謝遊玩。請前往圖書館櫃臺出示遊戲結束畫面，並填寫完問卷後，即可領取小禮物。
+若想重新體驗，請輸入「重來」。（輸入前請先至櫃臺領取禮物，否則遊戲結束畫面會被刪除喔！）`,
     riddle: '',
     hints: [],
     answers: ['重來'],
@@ -208,7 +204,7 @@ function displayMessage(text: string, type: 'story' | 'riddle' | 'hint' | 'playe
     messageElement.classList.add('message', type);
     messageElement.innerHTML = text; // Use innerHTML to render the image tag
     gameContainer.appendChild(messageElement);
-    gameContainer.scrollTop = gameContainer.scrollHeight;
+    messageElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
   }, delay);
 }
 
@@ -251,6 +247,12 @@ function handleInput(input: string) {
   const isCorrect = stage.answers.some(answer => input.trim() === answer.trim());
 
   if (isCorrect) {
+    // Special handling for restart
+    if (stage.answers.includes('重來')) {
+        resetGame();
+        return;
+    }
+      
     if (stage.successStory) {
        if (Array.isArray(stage.successStory)) {
             stage.successStory.forEach((s, i) => displayMessage(s, 'story', i * 100));
@@ -263,12 +265,7 @@ function handleInput(input: string) {
     hintCount = 0;
 
     if (currentStageIndex < gameData.length) {
-      // Special handling for restart
-      if (stage.answers.includes('重來')) {
-          resetGame();
-      } else {
-          displayStage(gameData[currentStageIndex]);
-      }
+      displayStage(gameData[currentStageIndex]);
     } else {
         displayMessage("遊戲結束。", "system");
     }
