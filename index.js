@@ -188,15 +188,18 @@ let hintCount = 0;
  * @param {string} text The message text.
  * @param {'story' | 'riddle' | 'hint' | 'player' | 'system' | 'error'} type The message type.
  * @param {number} delay The delay before the message appears.
+ * @param {boolean} doScroll Whether to scroll the view to the new message.
  */
-function displayMessage(text, type, delay = 0) {
+function displayMessage(text, type, delay = 0, doScroll = false) {
   if (!text) return;
   setTimeout(() => {
     const messageElement = document.createElement('div');
     messageElement.classList.add('message', type);
     messageElement.innerHTML = text; // Use innerHTML to render the image tag
     gameContainer.appendChild(messageElement);
-    messageElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    if (doScroll) {
+      messageElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
   }, delay);
 }
 
@@ -227,10 +230,10 @@ function handleInput(input) {
   // Handle hints
   if (input === '提示') {
     if (hintCount < stage.hints.length) {
-      displayMessage(`提示 ${hintCount + 1}: ${stage.hints[hintCount]}`, 'hint');
+      displayMessage(`提示 ${hintCount + 1}: ${stage.hints[hintCount]}`, 'hint', 0, true);
       hintCount++;
     } else {
-      displayMessage('沒有更多提示了。', 'system');
+      displayMessage('沒有更多提示了。', 'system', 0, true);
     }
     return;
   }
@@ -263,7 +266,7 @@ function handleInput(input) {
     }
 
   } else {
-    displayMessage('答案不對,再試一次。', 'error');
+    displayMessage('答案不對,再試一次。', 'error', 0, true);
   }
 }
 
@@ -283,7 +286,7 @@ inputForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const input = playerInput.value.trim();
   if (input) {
-    displayMessage(`> ${input}`, 'player');
+    displayMessage(`> ${input}`, 'player', 0, true);
     handleInput(input);
     playerInput.value = '';
   }
